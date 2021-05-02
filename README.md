@@ -18,3 +18,9 @@ $ docker-compose run --rm maven mvn clean package
 ```bash
 $ docker-compose run --rm maven java -cp target/BowlingGame-1.0-SNAPSHOT.jar jobsity.challenge.bowlingGameApp.BowlingGameApp
 ```
+
+## Run All Test
+
+```bash
+$ docker-compose run --rm maven mvn test
+```
