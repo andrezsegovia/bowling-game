@@ -1,7 +1,7 @@
 package jobsity.challenge.bowlingGameApp.core;
 
-import jobsity.challenge.bowlingGameApp.core.frame.Frame;
-import jobsity.challenge.bowlingGameApp.core.frame.FrameUtils;
+import jobsity.challenge.bowlingGameApp.model.Frame;
+import jobsity.challenge.bowlingGameApp.utils.FrameUtils;
 
 import java.util.Iterator;
 import java.util.List;

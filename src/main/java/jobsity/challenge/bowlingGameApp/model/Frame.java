@@ -1,4 +1,4 @@
-package jobsity.challenge.bowlingGameApp.core.frame;
+package jobsity.challenge.bowlingGameApp.model;
 
 public class Frame {
 

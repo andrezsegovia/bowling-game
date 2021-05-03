@@ -1,6 +1,6 @@
 package jobsity.challenge.bowlingGameApp.core;
 
-import jobsity.challenge.bowlingGameApp.core.frame.Frame;
+import jobsity.challenge.bowlingGameApp.model.Frame;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -85,6 +85,26 @@ public class CalculatorTest {
         game.add(new Frame(9, "X", "9", "0"));
 
         int[] totals = {16,25,44,53,82,101,110,124,132,151};
+        Calculator.compute(game);
+        int[] result = game.stream().mapToInt(Frame::getTotal).toArray();
+        assertArrayEquals(totals, result);
+    }
+
+    @Test
+    public void shouldCalculateTotalForEachFrameAllFoul() {
+        List<Frame> game = new ArrayList<>();
+        game.add(new Frame(0, "F", "F"));
+        game.add(new Frame(1, "F", "F"));
+        game.add(new Frame(2, "F", "F"));
+        game.add(new Frame(3, "F", "F"));
+        game.add(new Frame(4, "F", "F"));
+        game.add(new Frame(5, "F", "F"));
+        game.add(new Frame(6, "F", "F"));
+        game.add(new Frame(7, "F", "F"));
+        game.add(new Frame(8, "F", "F"));
+        game.add(new Frame(9, "F", "F", "F"));
+
+        int[] totals = {0,0,0,0,0,0,0,0,0,0};
         Calculator.compute(game);
         int[] result = game.stream().mapToInt(Frame::getTotal).toArray();
         assertArrayEquals(totals, result);

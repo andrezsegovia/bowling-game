@@ -1,6 +1,6 @@
-package jobsity.challenge.bowlingGameApp.core.frame;
+package jobsity.challenge.bowlingGameApp.utils;
 
-import java.util.List;
+import jobsity.challenge.bowlingGameApp.model.Frame;
 
 public class FrameUtils {
 
