@@ -1,8 +1,5 @@
 package jobsity.challenge.bowlingGameApp.core;
 
-import org.w3c.dom.ls.LSInput;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ScoreCalculator {

@@ -5,6 +5,7 @@ public class Frame {
     int index;
     String ballOne;
     String ballTwo;
+    String ballThree;
     int total;
 
     public Frame(int index, String ballOne, String ballTwo) {
@@ -13,8 +14,19 @@ public class Frame {
         this.ballTwo = ballTwo;
     }
 
+    public Frame(int index, String ballOne, String ballTwo, String ballThree) {
+        this.index = index;
+        this.ballOne = ballOne;
+        this.ballTwo = ballTwo;
+        this.ballThree = ballThree;
+    }
+
     public int getTotal() {
         return total;
+    }
+
+    public void setTotal(int total) {
+        this.total = total;
     }
 
     public int getIndex() {
@@ -27,6 +39,10 @@ public class Frame {
 
     public String getBallTwo() {
         return ballTwo;
+    }
+
+    public String getBallThree() {
+        return ballThree;
     }
 
     @Override

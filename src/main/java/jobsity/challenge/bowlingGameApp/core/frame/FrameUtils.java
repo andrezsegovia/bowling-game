@@ -22,10 +22,23 @@ public class FrameUtils {
         return ballValueToInt(frame, 1) + ballValueToInt(frame, 2);
     }
 
+    public static int calculateTotalByFrameWithThreeBalls(Frame frame) {
+        return ballValueToInt(frame, 1) + ballValueToInt(frame, 2)
+                + (frame.getBallThree() != null && !frame.getBallThree().isEmpty() ? ballValueToInt(frame, 3) : 0);
+    }
+
     public static int ballValueToInt(Frame frame, int ballNumber) {
         Integer result;
 
-        String ballValue = ballNumber == 1? frame.getBallOne(): frame.getBallTwo();
+        String ballValue = null;
+
+        if(ballNumber == 1) {
+            ballValue = frame.getBallOne();
+        } else if(ballNumber == 2) {
+            ballValue = frame.getBallTwo();
+        } else if(ballNumber == 3) {
+            ballValue = frame.getBallThree();
+        }
 
         if(ballValue == null) {
             throw new NullPointerException("Ball value is null");
